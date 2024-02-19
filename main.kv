@@ -1,0 +1,52 @@
+<Start>:
+
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            
+            Spinner:
+                id: ques_id
+                text : "Questions"
+                values :["5","10","20"]
+            Spinner:
+                id: level_id
+                text : "Level"
+                values :["3","4","5","6]
+
+            Button:
+                text : 'Start'
+                on_release: root.first()
+            Button:
+                id : generate
+                text : 'Next'
+                on_release: root.generate_question()
+
+            
+                
+        
+        Label:
+            id: random_question
+            text:''
+            font_size : dp(20)
+            color : 0,0,1
+        Button:
+            id: option_a
+            text:''
+            font_size : dp(20)
+            color : 0,0,1
+            on_release : root.check_answer(option_a.text)
+
+        Button:
+            id: option_b
+            text:''
+            font_size : dp(20)
+            color : 0,0,1
+            on_release : root.check_answer(option_b.text)
+        Button:
+            id: option_c
+            text:''
+            font_size : dp(20)
+            color : 0,0,1
+            on_release : root.check_answer(option_c.text)
+        
+
